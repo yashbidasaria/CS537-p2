@@ -1,0 +1,329 @@
+starting build
+
+**********************************************************************
+
+Test build
+build xv6 using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target `clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+
+
+test build FAILED
+ (build xv6 using make)
+ file 'bootasm.o' exists after make clean, removing
+ file 'bootmain.o' exists after make clean, removing
+ file 'bio.o' exists after make clean, removing
+ file 'console.o' exists after make clean, removing
+ file 'exec.o' exists after make clean, removing
+ file 'file.o' exists after make clean, removing
+ file 'fs.o' exists after make clean, removing
+ file 'ide.o' exists after make clean, removing
+ file 'ioapic.o' exists after make clean, removing
+ file 'kalloc.o' exists after make clean, removing
+ file 'kbd.o' exists after make clean, removing
+ file 'lapic.o' exists after make clean, removing
+ file 'main.o' exists after make clean, removing
+ file 'mp.o' exists after make clean, removing
+ file 'picirq.o' exists after make clean, removing
+ file 'pipe.o' exists after make clean, removing
+ file 'proc.o' exists after make clean, removing
+ file 'spinlock.o' exists after make clean, removing
+ file 'string.o' exists after make clean, removing
+ file 'swtch.o' exists after make clean, removing
+ file 'syscall.o' exists after make clean, removing
+ file 'sysfile.o' exists after make clean, removing
+ file 'sysproc.o' exists after make clean, removing
+ file 'timer.o' exists after make clean, removing
+ file 'trapasm.o' exists after make clean, removing
+ file 'trap.o' exists after make clean, removing
+ file 'uart.o' exists after make clean, removing
+ file 'vectors.o' exists after make clean, removing
+ file 'vm.o' exists after make clean, removing
+ file 'multiboot.o' exists after make clean, removing
+ file 'data.o' exists after make clean, removing
+ file 'bootother.o' exists after make clean, removing
+ file 'initcode.o' exists after make clean, removing
+ make failed (error 2)
+ required file 'xv6.img' does not exist after make
+ required file 'fs.img' does not exist after make
+
+starting getpinfo
+
+**********************************************************************
+
+Test getpinfo
+Workload: Check getpinfo works
+  Expected: getpid() exists in getpinfo
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/getpinfo.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test getpinfo FAILED (0 of 10)
+ (Workload: Check getpinfo works
+  Expected: getpid() exists in getpinfo)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting test_ptable
+
+**********************************************************************
+
+Test test_ptable
+Workload: Checks getpinfo mirrors ptable
+  Expected: init, sh, tester are in the ptable
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/test_ptable.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test test_ptable FAILED (0 of 10)
+ (Workload: Checks getpinfo mirrors ptable
+  Expected: init, sh, tester are in the ptable)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting single_job_long
+
+**********************************************************************
+
+Test single_job_long
+Workload: Single long running process (spinning)
+  Expected: No priority upgrade occurred for running process
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/single_job_long.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test single_job_long FAILED (0 of 10)
+ (Workload: Single long running process (spinning)
+  Expected: No priority upgrade occurred for running process)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting new_process
+
+**********************************************************************
+
+Test new_process
+Workload: Parent process runs until at lowest, fork child process
+  Expected: Parent process does not run until new process is at the lowest priority
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/new_process.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test new_process FAILED (0 of 10)
+ (Workload: Parent process runs until at lowest, fork child process
+  Expected: Parent process does not run until new process is at the lowest priority)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting multiple_jobs_io
+
+**********************************************************************
+
+Test multiple_jobs_io
+Workload: Just checks i/o functionality still works
+  Expected: No regression in i/o and scheduler does not fail
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/multiple_jobs_io.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test multiple_jobs_io FAILED (0 of 10)
+ (Workload: Just checks i/o functionality still works
+  Expected: No regression in i/o and scheduler does not fail)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting stress_test
+
+**********************************************************************
+
+Test stress_test
+Workload: Fill the ptable multiple times with new processes.
+  Expected: OS does not fail to allocate processes
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/stress_test.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test stress_test FAILED (0 of 10)
+ (Workload: Fill the ptable multiple times with new processes.
+  Expected: OS does not fail to allocate processes)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting stress_test_io
+
+**********************************************************************
+
+Test stress_test_io
+Workload: Run multiple concurrent i/o requests
+  Expected: No regression in i/o and scheduler does not fail
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/stress_test_io.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test stress_test_io FAILED (0 of 10)
+ (Workload: Run multiple concurrent i/o requests
+  Expected: No regression in i/o and scheduler does not fail)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting test_round_robin
+
+**********************************************************************
+
+Test test_round_robin
+Workload: 4 processes running long running workloads (spinning)
+  Expected: No process is upgraded and lowest priority are running in % 20
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/test_round_robin.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test test_round_robin FAILED (0 of 10)
+ (Workload: 4 processes running long running workloads (spinning)
+  Expected: No process is upgraded and lowest priority are running in % 20)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting test_upgrade
+
+**********************************************************************
+
+Test test_upgrade
+Workload: 7 long running processes
+  Expected: At least 1 process gets upgraded to priority 2
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/test_upgrade.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test test_upgrade FAILED (0 of 10)
+ (Workload: 7 long running processes
+  Expected: At least 1 process gets upgraded to priority 2)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+starting multiple_jobs
+
+**********************************************************************
+
+Test multiple_jobs
+Workload: Synchronous workload varying tick workload. (Spin duration)
+  Expected: Verify each process only runs for the allotted amount of time at each level. (ie. p0 - 5 ticks, p1 - 5 ticks, p2 - 10 ticks, etc.)
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/2b/multiple_jobs.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+
+test multiple_jobs FAILED (0 of 10)
+ (Workload: Synchronous workload varying tick workload. (Spin duration)
+  Expected: Verify each process only runs for the allotted amount of time at each level. (ie. p0 - 5 ticks, p1 - 5 ticks, p2 - 10 ticks, etc.))
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+**********************************************************************
+Summary:
+test build FAILED
+ (build xv6 using make)
+ file 'bootasm.o' exists after make clean, removing
+ file 'bootmain.o' exists after make clean, removing
+ file 'bio.o' exists after make clean, removing
+ file 'console.o' exists after make clean, removing
+ file 'exec.o' exists after make clean, removing
+ file 'file.o' exists after make clean, removing
+ file 'fs.o' exists after make clean, removing
+ file 'ide.o' exists after make clean, removing
+ file 'ioapic.o' exists after make clean, removing
+ file 'kalloc.o' exists after make clean, removing
+ file 'kbd.o' exists after make clean, removing
+ file 'lapic.o' exists after make clean, removing
+ file 'main.o' exists after make clean, removing
+ file 'mp.o' exists after make clean, removing
+ file 'picirq.o' exists after make clean, removing
+ file 'pipe.o' exists after make clean, removing
+ file 'proc.o' exists after make clean, removing
+ file 'spinlock.o' exists after make clean, removing
+ file 'string.o' exists after make clean, removing
+ file 'swtch.o' exists after make clean, removing
+ file 'syscall.o' exists after make clean, removing
+ file 'sysfile.o' exists after make clean, removing
+ file 'sysproc.o' exists after make clean, removing
+ file 'timer.o' exists after make clean, removing
+ file 'trapasm.o' exists after make clean, removing
+ file 'trap.o' exists after make clean, removing
+ file 'uart.o' exists after make clean, removing
+ file 'vectors.o' exists after make clean, removing
+ file 'vm.o' exists after make clean, removing
+ file 'multiboot.o' exists after make clean, removing
+ file 'data.o' exists after make clean, removing
+ file 'bootother.o' exists after make clean, removing
+ file 'initcode.o' exists after make clean, removing
+ make failed (error 2)
+ required file 'xv6.img' does not exist after make
+ required file 'fs.img' does not exist after make
+
+test getpinfo FAILED (0 of 10)
+ (Workload: Check getpinfo works
+  Expected: getpid() exists in getpinfo)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test test_ptable FAILED (0 of 10)
+ (Workload: Checks getpinfo mirrors ptable
+  Expected: init, sh, tester are in the ptable)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test single_job_long FAILED (0 of 10)
+ (Workload: Single long running process (spinning)
+  Expected: No priority upgrade occurred for running process)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test new_process FAILED (0 of 10)
+ (Workload: Parent process runs until at lowest, fork child process
+  Expected: Parent process does not run until new process is at the lowest priority)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test multiple_jobs_io FAILED (0 of 10)
+ (Workload: Just checks i/o functionality still works
+  Expected: No regression in i/o and scheduler does not fail)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test stress_test FAILED (0 of 10)
+ (Workload: Fill the ptable multiple times with new processes.
+  Expected: OS does not fail to allocate processes)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test stress_test_io FAILED (0 of 10)
+ (Workload: Run multiple concurrent i/o requests
+  Expected: No regression in i/o and scheduler does not fail)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test test_round_robin FAILED (0 of 10)
+ (Workload: 4 processes running long running workloads (spinning)
+  Expected: No process is upgraded and lowest priority are running in % 20)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test test_upgrade FAILED (0 of 10)
+ (Workload: 7 long running processes
+  Expected: At least 1 process gets upgraded to priority 2)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+test multiple_jobs FAILED (0 of 10)
+ (Workload: Synchronous workload varying tick workload. (Spin duration)
+  Expected: Verify each process only runs for the allotted amount of time at each level. (ie. p0 - 5 ticks, p1 - 5 ticks, p2 - 10 ticks, etc.))
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpK4QOOs/p/user/tester.c'
+
+Passed 0 of 11 tests.
+Overall 0 of 11
+Points 0 of 100
